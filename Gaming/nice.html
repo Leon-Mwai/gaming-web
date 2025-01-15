@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Review Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gaming Reviews</h1>
+        <p>Your ultimate gaming review platform!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#fortnite">Fortnite</a></li>
+            <li><a href="#cod">Call of Duty</a></li>
+            <li><a href="#apex">Apex Legends</a></li>
+            <li><a href="#gta5">GTA 5</a></li>
+            <li><a href="#forza">Forza Horizon</a></li>
+            <li><a href="#nfs">Need for Speed</a></li>
+        </ul>
+    </nav>
+
+    <section id="fortnite" class="game-review">
+        <h2>Fortnite</h2>
+        <img src="https://img.freepik.com/premium-photo/fortnite-wallpaper-4k-gaming-wallpaper_1121250-393363.jpg?semt=ais_hybrid" alt="Fortnite Image" title="Fortnite">
+        <p>Fortnite is a popular battle royale game where players fight to be the last one standing.</p>
+        <p><strong>Rating:</strong> 9/10</p>
+        <p><strong>Tags:</strong> Battle Royale, Multiplayer, Free-to-Play, Cross-Platform, Action, Shooter</p>
+        <p><a href="https://www.epicgames.com/fortnite" target="_blank" class="learn-more-link">Learn more about Fortnite</a></p>
+    </section>
+
+    <section id="cod" class="game-review">
+        <h2>Call of Duty</h2>
+        <img src="https://gaming-cdn.com/images/products/15595/orig/call-of-duty-2025-pc-game-cover.jpg?v=1703064964" alt="Call of Duty Image" title="Call Of Duty">
+        <p>Call of Duty brings epic warfare action with various modes and missions, popular in the FPS genre.</p>
+        <p><strong>Rating:</strong> 8/10</p>
+        <p><strong>Tags:</strong> FPS, Multiplayer, Warfare, Shooter, Tactical, Action</p>
+        <p><a href="https://www.callofduty.com/" target="_blank" class="learn-more-link">Learn more about Call of Duty</a></p>
+    </section>
+
+    <section id="apex" class="game-review">
+        <h2>Apex Legends</h2>
+        <img src="https://media.contentapi.ea.com/content/dam/apex-legends/common/apex-price-change-key-art.jpg.adapt.crop16x9.431p.jpg" alt="Apex Legends Image" title="Apex Legends">
+        <p>Apex Legends is a fast-paced, free-to-play battle royale that emphasizes teamwork and strategic play.</p>
+        <p><strong>Rating:</strong> 8.5/10</p>
+        <p><strong>Tags:</strong> Battle Royale, Team-Based, Multiplayer, Shooter, Free-to-Play, Action</p>
+        <p><a href="https://www.ea.com/games/apex-legends" target="_blank" class="learn-more-link">Learn more about Apex Legends</a></p>
+    </section>
+
+    <section id="gta5" class="game-review">
+        <h2>GTA 5</h2>
+        <img src="https://images.hindustantimes.com/tech/img/2022/10/17/960x540/_0f3052c8-e4f3-11e9-bf1a-4811dd02bcdc_1666014273808_1666014273808.jpg" alt="GTA 5 Image" title="GTA 5">
+        <p>Grand Theft Auto 5 offers an open-world experience filled with action, heists, and multiplayer options.</p>
+        <p><strong>Rating:</strong> 10/10</p>
+        <p><strong>Tags:</strong> Open-World, Action, Adventure, Shooter, Story-Driven, Multiplayer</p>
+        <p><a href="https://www.rockstargames.com/V" target="_blank" class="learn-more-link">Learn more about GTA 5</a></p>
+    </section>
+
+    <section id="forza" class="game-review">
+        <h2>Forza Horizon</h2>
+        <img src="https://venturebeat.com/wp-content/uploads/2021/11/forzahorizon5-1.jpg?w=1024?w=1200&strip=all" alt="Forza Horizon Image" title="Forza Horizon">
+        <p>Forza Horizon is a racing game that combines stunning graphics with an open-world environment and immersive driving mechanics.</p>
+        <p><strong>Rating:</strong> 9/10</p>
+        <p><strong>Tags:</strong> Racing, Open-World, Simulation, Competitive, Driving, Sports</p>
+        <p><a href="https://forzamotorsport.net/" target="_blank" class="learn-more-link">Learn more about Forza Horizon</a></p>
+    </section>
+
+    <section id="nfs" class="game-review">
+        <h2>Need for Speed</h2>
+        <img src="https://cdn.mos.cms.futurecdn.net/iPjAi5Nn52JXb3o6wFPV2D-1200-80.jpg" alt="Need for Speed Image" title="Need for Speed">
+        <p>Need for Speed offers high-octane racing action with car customization and thrilling street races.</p>
+        <p><strong>Rating:</strong> 8/10</p>
+        <p><strong>Tags:</strong> Racing, Action, Speed, Customization, Street Racing, Sports</p>
+        <p><a href="https://www.ea.com/games/need-for-speed" target="_blank" class="learn-more-link">Learn more about Need for Speed</a></p>
+    </section>
+
+    <section id="review-form">
+        <h2>Leave Your Review</h2>
+        <form action="submit_review.php" method="post">
+            <fieldset>
+                <legend>Game Review Form</legend>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+
+                <label for="game">Which Game are you reviewing?</label>
+                <select id="game" name="game" required>
+                    <option value="fortnite">Fortnite</option>
+                    <option value="cod">Call of Duty</option>
+                    <option value="apex">Apex Legends</option>
+                    <option value="gta5">GTA 5</option>
+                    <option value="forza">Forza Horizon</option>
+                    <option value="nfs">Need for Speed</option>
+                </select>
+                <br>
+
+                <label for="rating">Rating (1-10):</label>
+                <input type="number" id="rating" name="rating" min="1" max="10" required>
+                <br>
+
+                <label for="comments">Your Comments:</label>
+                <textarea id="comments" name="comments" rows="4" required></textarea>
+                <br>
+
+                <button type="submit">Submit Review</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gaming Reviews | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
