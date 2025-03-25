@@ -1,0 +1,205 @@
+/* 🌌 Body Styling with Dynamic Background */
+body {
+    background: #1e1e1e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    transition: background 1.5s ease-in-out; /* Smooth background transition */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+
+/* 🎛 Toggle Button */
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #8b48d7, #debff4);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+#theme-toggle:hover {
+    background: linear-gradient(135deg, #debff4, #8b48d7);
+    transform: scale(1.1);
+}
+
+/* ❄ IceCold Container */
+#weather-container {
+    background: rgba(255, 255, 255, 0.1);
+    max-width: 420px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 40px rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 💎 Frosty Glow Effect */
+#weather-container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 50%);
+    animation: frostGlow 5s infinite alternate ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes frostGlow {
+    0% { transform: translate(0, 0); opacity: 0.3; }
+    100% { transform: translate(10px, 10px); opacity: 0.6; }
+}
+
+#weather-container:hover {
+    transform: scale(1.05);
+}
+
+/* ❄ Frosty Title */
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+}
+
+/* ☁ Weather Info */
+#weather-info {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 12px;
+    word-wrap: break-word;
+    color: white;
+}
+
+/* 🌡 Temperature Display */
+#temp-div p {
+    font-size: 65px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* 🧊 Input Styling */
+input {
+    width: calc(100% - 16px);
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    outline: none;
+    border-color: white;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🎛 Button */
+button {
+    display: block;
+    margin: 20px auto 0;
+    background: linear-gradient(135deg, #debff4, #8b48d7);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 130px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #8b48d7, #debff4);
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* ❄ Shivering Animation (For Freezing Temp) */
+@keyframes shiver {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+}
+
+.shiver {
+    animation: shiver 0.2s infinite;
+}
+
+/* ⚡ Glitch Effect on "Stay Frosty, Soldier" */
+@keyframes glitch {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0, 0); }
+}
+
+.glitch {
+    animation: glitch 0.2s infinite;
+    color: #00f2ff;
+    text-shadow: 2px 2px 4px rgba(0, 242, 255, 0.8);
+}
+
+
+
+/* 🎭 Hourly Forecast */
+#hourly-forecast {
+    margin-top: 40px;
+    padding-top: 10px;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+.hourly-item {
+    flex: 0 0 auto;
+    width: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.hourly-item img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 5px;
+}
