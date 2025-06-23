@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_migrate import Migrate               # ✅ import Migrate
+from flask_migrate import Migrate              
 from server.config import Config
 from server.models import db
 from server.controllers.restaurant_controller import restaurant_bp
@@ -11,7 +11,7 @@ def create_app():
     app.config.from_object(Config)
 
     db.init_app(app)
-    migrate = Migrate(app, db)                   # ✅ initialize Migrate
+    migrate = Migrate(app, db)                  
 
     app.register_blueprint(restaurant_bp, url_prefix='/')
     app.register_blueprint(pizza_bp, url_prefix='/')
